@@ -1,0 +1,201 @@
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+/* ---------------------------------- */
+*{
+    font-family: 微軟正黑體;
+    text-align: center;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+body {
+    background: url('https://images.pexels.com/photos/893126/pexels-photo-893126.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.location_icon {
+    position: fixed;
+    left: 10px;
+    top: 70px;
+
+    z-index: 2;
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+.location_icon:hover {
+    background: #f4f4f4;
+}
+
+.location_icon img{
+    display: block;
+    width: 18px;
+}
+
+th , td {
+    border: 1px solid rgb(92, 89, 89);
+
+    font-size: 8px;
+    line-height: 16px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position: fixed;
+    background: url('https://i.pinimg.com/564x/aa/30/6b/aa306bbd2d8e870463b4b047223ca45f.jpg');
+    left: 50px;
+    bottom: 50px;
+    border-radius: 20px;
+    width: 300px;
+    height: 450px;   
+    padding: 10px;
+    
+    box-shadow:10px 10px 20px rgb(104, 102, 102);
+    z-index: 100;
+}
+
+.main h1 {
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-shadow: -3px -3px white, 1px 1px #333;
+}
+
+.main .area , .main .list{
+    display: none;
+}
+
+.form-control {
+    width: 60%;
+
+    transition: all .5s;
+}
+
+.form-control:hover {
+    border: 1px solid #f56c6c;
+}
+
+.list {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.list .back a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: center;
+    letter-spacing: 10px;
+    background: #fff;
+    color: rgb(245, 108, 108);
+
+    transition: all 1s;
+}
+
+.list .back a:hover {
+    color: white;
+    background-color:  rgba(245, 108, 108, .5);
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 3px;
+    padding: 10px;
+    border-radius: 0;
+
+    transition: all .5s;
+}
+
+.card:hover {
+    background: rgba(245, 108, 108, .7);
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+.card:hover .total {
+    color: #fff;
+}
+
+.card h3 {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 900;
+}
+
+.card p {
+    margin-bottom: 5px;
+}
+
+.card .total {
+    text-align: right;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 900;
+    color: rgb(245, 108, 108);
+}
+
+.card .num {
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+
+#map { 
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+ }
+
+
+ .leaflet-popup-content-wrapper .storename {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 900;
+    color: #000;
+ }
+
+ .leaflet-popup-content-wrapper .total {
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 900;
+    color: rgb(245, 108, 108);
+ }
+
+ .leaflet-popup-content-wrapper .num {
+    font-size: 35px;
+    letter-spacing: 5px;
+ }
