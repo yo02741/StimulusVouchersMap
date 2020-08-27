@@ -8,7 +8,7 @@ var h1_el = document.querySelector('#title');
 var city_el = document.querySelector('#city');
 var area_el = document.querySelector('#area');
 var strr = `<option selected disabled>請選擇縣市</option>`;
-var strrr = `<option selected disabled>請選擇</option>`;
+var strrr = `<option selected disabled>請選擇地區</option>`;
 
 
 // 建立 Leaflet 地圖
@@ -40,7 +40,7 @@ loca_el.addEventListener('click',function(){
 
 
 // 設定圖資來源
-var osmUrl='https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png';
+var osmUrl='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 var osm = new L.TileLayer(osmUrl, {minZoom: 6, maxZoom: 18});
 map.addLayer(osm);
 
@@ -83,14 +83,13 @@ axios.get(cityareaurl)
         strr += `<option value ="${item.CityName}">${item.CityName}</option>`
     })
     city_el.innerHTML = strr;
-    // console.log(response.data)
+    area_el.innerHTML = strrr;
 
     city_el.addEventListener('change',function(){
         area_el.setAttribute('style','display:block')
-        // console.log(city_el.value)
         response.data.forEach(ci=>{  
             if(city_el.value === ci.CityName){
-                strrr = `<option selected disabled>請選擇</option>`;
+                strrr = `<option selected disabled>請選擇地區</option>`;
                 ci.AreaList.forEach(item=>{
                     strrr += `<option value ="${item.AreaName}">${item.AreaName}</option>`;
                 })
@@ -134,7 +133,6 @@ axios.get(cityareaurl)
         var backbtn_el = Array.apply(null, backbtn_el_nodelist);
         backbtn_el.forEach(item=>{
             item.addEventListener('click',function(){
-                console.log('hi')
                 city_el.setAttribute('style','display:block');
                 area_el.setAttribute('style','display:block');
                 h1_el.setAttribute('style','display:block');
