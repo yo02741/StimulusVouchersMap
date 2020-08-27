@@ -67,7 +67,8 @@ th , td {
     align-items: center;
 
     position: fixed;
-    background: url('https://i.pinimg.com/564x/aa/30/6b/aa306bbd2d8e870463b4b047223ca45f.jpg');
+    background: url('https://i.pinimg.com/564x/aa/30/6b/aa306bbd2d8e870463b4b047223ca45f.jpg') no-repeat;
+    background-size: 100% auto;
     left: 50px;
     bottom: 50px;
     border-radius: 20px;
